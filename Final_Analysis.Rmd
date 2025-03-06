@@ -115,7 +115,6 @@ geom_path(data = smooth_wall_rotated, aes(x, y), color = "black",
         panel.grid.minor = element_blank(),
         panel.border = element_blank(), 
         panel.background = element_blank())
-ggsave("Tarpons_hits.png", width = 8, height = 6, dpi = 500)
 ```
 
 ## Rays Hits at Tropicana Field
@@ -138,7 +137,6 @@ geom_baseball(league = "MLB", display_range = "full", rotation = 0) +
                linewidth = .75) +
   geom_segment(aes(x = 0, xend = 252, y= 0, yend = 250), colour = "yellow") +
   geom_segment(aes(x = 0, xend = -254, y= 0, yend = 257), colour = "yellow")
-ggsave("Rays_hits.png", width = 8, height = 6, dpi = 500)
 ```
 
 
@@ -175,7 +173,6 @@ bst_1 <- xgboost(data = dtrain, # Set training data
 imp_mat <- xgb.importance(model = bst_1)
 # Plot importance (top 10 variables)
 xgb.plot.importance(imp_mat, top_n = 10)
-ggsave("var_imp_1.png", width = 8, height = 6, dpi = 500)
 ```
 
 ```{r}
